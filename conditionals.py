@@ -81,4 +81,78 @@
 # optional- errot handling for lower/uppercase inputs
 # very optional - error handling for numeric input. 
 
+# 1st solution
 
+#weight = float(input("enter weight: "))
+#unit = input("enter K (kgs) or L (Lbs)")
+
+#if unit.upper() == "K":
+  #  converted = weight / 0.45
+ #   print(f"converted weight is {converted}")
+#elif unit.upper() == "L":
+ #   converted  = weight * 0.45
+#    print(f"converted weight is {converted}")
+#else:
+    #print("invalid choice!!!!!!")
+
+# 2nd solution
+
+#try:
+#    result = 10/0
+#except ValueError:
+ #   print("A ValueError occured")
+#except ZeroDivisionError:
+#    print("Division by zero is not allowed") 
+#except:
+ #   print("an error has occured")
+#except Exception as e:
+#    print(f"an error occurd: {e}")
+#finally:
+#    print("clean up actions go here???")
+
+# 2nd solution
+#import sys
+#while True:
+    #try: 
+   #     weight = float(input("enter weight: "))
+  #      break
+  #  except ValueError:
+ #       print("invalid input, should be numeric")
+        #sys.exit()
+
+#while True:
+
+   # unit = input("enter K (kgs) or L (Lbs)").upper()
+
+    #if unit == "K":
+     #   converted = weight / 0.45
+     #   print(f"converted weight is {converted}")
+    #    break
+    #elif unit == "L":
+    #    converted  = weight * 0.45
+    #    print(f"converted weight is {converted}")
+    #    break
+   # else:
+   #     print("invalid choice enter K or L !!!!!!!!!")
+
+
+# highest number
+
+#num = 30
+#num1 = 20
+
+#if num > num1:
+ #   print(num)
+#else: 
+  #  print(num1)
+
+# rewrite without using if statements or any in-built functions (no max!!)
+
+#num = 50
+#num1 = 40
+
+#result = (num > num1) * num + (num <= num1) * num1
+#print(result)
+
+#result = num1 + (num - num1) * (num >= num1)
+#print(result)
