@@ -95,7 +95,7 @@
 # keys need to be unique, vlaues can be anything.
 # {}
 
-drinks = {"fizzy": "sprite", "still": "water", "juice": "orange", "alcoholic": "wine"}
+#drinks = {"fizzy": ["sprite", "cola"], "still": "water", "juice": "orange", "alcoholic": "wine"}
 
 #print(drinks)
 
@@ -115,7 +115,7 @@ drinks = {"fizzy": "sprite", "still": "water", "juice": "orange", "alcoholic": "
 
 # get
 #print(drinks.get("still"))
-#print(drinks.get("stillleee"))
+#print(drinks.get("stillleee")) == None 
 #print(drinks.get("stuilllelelelel", "not found"))
 
 # update
@@ -134,8 +134,42 @@ drinks = {"fizzy": "sprite", "still": "water", "juice": "orange", "alcoholic": "
 # Print a STRING of the books by that author. (not a list) use join. 
 # opionally consider if the user inputs incorrect author name. 
 
+# 1st solution
+
+#books = {"author1": ["book1", "book2"], "author2": ["book3", "book4"]}
+
+#x = input("enter an author name: ")
+
+#print(", ".join(books[x]))
+
+# 2nd solution 
+
+#books = {"author1": ["book1", "book2"], "author2": ["book3", "book4"]}
+
+#y = input("enter an author name: ")
+
+#x = books.get(y, []) # None -- NOT AN ITERABLE
+
+#print(", ".join(x) or "Author not found")
 
 
+# tuples
 
+#rectangle = 10, 5
+
+#rectangle[0] = 15
+
+# sets
+
+#set1 = {1, 2, 3, 4, 5}
+#set2 = {4, 5, 6, 7, 8}
+
+#print(set1.union(set2))
+
+#print(set1.intersection(set2))
+
+#print(set1.symmetric_difference(set2))
+
+#print(set1.difference(set2))
 
 
