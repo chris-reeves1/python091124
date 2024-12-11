@@ -119,3 +119,36 @@
 # for loop
 # list comprehnsion
 # optional - list comp 1 line of code only!! 
+
+#counter = 0
+
+#while counter < 5:
+  #  name = input("enter a name: ")
+ #   print(name + " is cool")
+ #   counter += 1
+
+
+#for x in range(5):
+  #  name = input("enter a name: ")
+  #  print(name + " is cool")
+
+
+#names = [input("enter a name: ") for name in range(5)]
+
+#for name in names:
+#    print(f"{name} is coooooool")
+
+# combined list comp
+
+
+
+#inner list
+#[input("enter name: ") for x in range(5)]
+#outer list
+#[print(f"{name} is cool") for name in iterable]
+
+# list comp side affect
+
+x = [print(f"{name} is cool") for name in [input("enter name: ") for x in range(5)]]
+
+print(x)
