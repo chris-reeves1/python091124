@@ -1,39 +1,123 @@
 #1. Create a Rectangle class with attributes length and width. 
 #Add methods to calculate the area and perimeter of the rectangle. 
 
+#class Rectangle:
+#    def __init__(self, length, width)
+#        self.length = length
+#        self.width = width
+
+#    def area(self):
+#        return self.length * self.width
+    
+ #   def perimeter(self):
+ #       return 2 * (self.length + self.width)
+
+#rect = Rectangle(5, 10)
+#print(rect.area())
+#print(rect.perimeter())        
+
 #2. Create a BankAccount class with attributes account_number and balance. 
 #Add methods to deposit and withdraw money from the account. 
+
+class BankAccount:
+    def __init__(self, account_number, balance=0):
+        self.account_number = account_number
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("insufficient funds")
+        else:
+            self.balance -= amount
+
+    def get_balance(self):
+        return self.balance
+
+acct = BankAccount("1234")
+
+print(acct.get_balance())
+acct.deposit(100)
+print(acct.get_balance())
+acct.withdraw(50)
+print(acct.get_balance())
+acct.withdraw(1000)
+
+
+
 
 #3. Create a Car class with attributes make, model, and year. 
 #Add methods to get and set the values of the attributes. 
 
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def get_make(self):
+        return self.make
+
+    def set_make(self, make):
+        self.make = make
+
+    def get_model(self):
+        return self.model
+
+    def set_model(self, model):
+        self.model = model
+
+    def get_year(self):
+        return self.year
+
+    def set_year(self, year):
+        self.year = year
+
+    def __str__(self):
+        return f"{self.make} {self.model} {self.year}"
+
+car = Car("ford", "focus", 2000)
+
+print(car.get_make())
+print(car)
+car.set_make("toyota")
+car.set_model("pickup")
+car.set_year(2005)
+print(car)
+
 #4. Create a Product class with attributes name, price, and quantity. 
 #Add methods to calculate the total value of the product (price * quantity) 
-#and add or remove items from the product inventory.
+#and add or remove items from the product inventory. 
 
-OR:
+class Product:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
 
-# rps as a class
+    def total_value(self):
+        return self.price * self.quantity
 
-OR.....
+    def add_items(self, quantity):
+        self.quantity += quantity
 
-#Create a Book class and BookShelf class that can be used to manage a collection of books. 
-#Create a Book class that has the following attributes: 
-#title (str), author (str), publisher (str), publication year (int). 
-#The class should also have a str method that returns the book's information in a 
-#formatted string. 
-#Create a BookShelf class that has the following attributes: 
-#capacity (int), list of books (list). 
-#The class should have the following methods: 
-#- add_book: adds a book to the list of books if the shelf is not full 
-#- remove_book: removes a book from the list of books if it exists on the shelf 
-#- find_book_by_title: searches for a book by its title 
-#and returns the book object if found 
-#- find_books_by_author: searches for books by a specific author 
-#and returns a list of book objects if found 
-#The class should also have a str method that returns a string representation 
-#of the books on the shelf. 
+    def remove_items(self, quantity):
+        if quantity > self.quantity:
+            print("not enough stock")
+        else:
+            self.quantity -= quantity
 
-#Create four Book objects and add them to a BookShelf object with a capacity of three. 
-#Test the BookShelf object by adding, removing, and finding books by title and author.
-#Print the BookShelf object after each action.
+    def __str__(self):
+        return f"{self.name} {self.price} {self.quantity}"
+
+
+prod = Product("macbook", 1000, 5)
+
+print(prod.total_value())
+prod.add_items(5)
+print(prod.quantity)
+prod.remove_items(9)
+print(prod.quantity)
+print(prod) 
