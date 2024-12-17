@@ -99,6 +99,7 @@ import sqlite3
 
 
 # library database
+
 # Creata a table calle books:
 # books: - id, title, author, year, available
 # insert data: at least 3 entries.
