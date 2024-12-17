@@ -2,11 +2,11 @@
 
 # class - for checking strength:
 # returns:
-- very strong
-- strong
-- moderate
-- weak
-- very weak
+#- very strong
+#- strong
+#- moderate
+#- weak
+#- very weak
 
 # length, special characters, numbers etc. (check current owasp advice)
 # Check against a list of common passwords - if mathced = very weak. 
